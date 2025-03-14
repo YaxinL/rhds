@@ -9,8 +9,6 @@ mkdir -p $resultsdir
 
 url="https://gdac.broadinstitute.org/runs/stddata__2016_01_28/data/HNSC/20160128"
 
-echo "Data will be saved to: $datadir"
-
 # for loop line by line in data/files.csv
 # Skip the first line
 {
@@ -18,9 +16,7 @@ echo "Data will be saved to: $datadir"
     while IFS=, read -r filename date time size
     do
         echo "Downloading $filename from $url"
-        echo "Saving to: $datadir/$filename"
-        echo "Filename: '$filename'"
-        curl -s -L $url/$filename -o "$datadir/$filename"
+        curl -s -L $url/$filename
     done
 } < scripts/files.csv
 
