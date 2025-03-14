@@ -26,3 +26,18 @@ Rscript scripts/data-extract.r
 ```
 Rscript scripts/clean-clinical.r
 ```
+
+### 4. Predict proteins
+```
+Rscript scripts/predict-protein.r
+```
+
+### 5. Combine data
+```
+Rscript scripts/combine.r
+```
+
+### 6. Analysis
+```
+Rscript scripts/analysis.r
+```
